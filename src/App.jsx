@@ -1,5 +1,5 @@
 function App() {
-  return <>Init</>
+  return <></>
 }
 
 export default App
