@@ -1,19 +1,16 @@
-import useFetch from "use-http"
+import data from "./data.json"
+
+// .slice(0, 5)
 
 function App() {
-  const options = {}
-  const { loading, data } = useFetch(
-    "https://fantasy.premierleague.com/api/bootstrap-static/",
-    options,
-    []
-  )
+  const getKeepers = data.filter((keeper) => keeper.element_type === 1)
+  // const getDefenders = data.filter((keeper) => keeper.element_type === 2)
+  // const getMidfielders = data.filter((keeper) => keeper.element_type === 3)
+  // const getForwards = data.filter((keeper) => keeper.element_type === 4)
 
-  return (
-    <>
-      {loading && <h1>Loading</h1>}
-      {console.log(data)}
-    </>
-  )
+  console.log(getKeepers.sort((a, b) => b.saves - a.saves))
+
+  return <>Nan</>
 }
 
 export default App
