@@ -1,4 +1,5 @@
 import data from "./data.json"
+import AppBarFPL from "./appBarFPL/appBarFPL"
 
 // .slice(0, 5)
 
@@ -10,7 +11,11 @@ function App() {
 
   console.log(getKeepers.sort((a, b) => b.saves - a.saves))
 
-  return <>Nan</>
+  return (
+    <>
+      <AppBarFPL />
+    </>
+  )
 }
 
 export default App
