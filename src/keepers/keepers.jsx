@@ -9,9 +9,8 @@ import getMostInformKeeper from "./keeperFunctions"
 
 export default function Keepers() {
   const getAllKeepers = data.filter((keeper) => keeper.element_type === 1)
-  const MostInformSection = getMostInformKeeper(getAllKeepers).map(
+  const mostInformSection = getMostInformKeeper(getAllKeepers).map(
     (keeper, key) => {
-      console.log(keeper)
       return (
         <KeeperCard
           key={key}
@@ -37,7 +36,7 @@ export default function Keepers() {
       </Typography>
 
       <Box sx={{ display: "flex", justifyContent: "space-between" }}>
-        {MostInformSection}
+        {mostInformSection}
       </Box>
     </>
   )
